@@ -32,10 +32,21 @@ try {
 
 var express = require('express');
 var app = express();
+var bodyParser = require('body-parser');
 //var fs = require('fs');
+
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
 
 app.get('/ping', function(req, res){
 	res.end("Ping!");
+});
+
+app.post('/data', function(req, res) {
+	console.dir(req.body);
+  res.setHeader('Content-Type', 'text/plain')
+  res.write('you posted:\n')
+  res.end(JSON.stringify(req.body, null, 2))
 });
 
 var server = app.listen(8080, function(){
