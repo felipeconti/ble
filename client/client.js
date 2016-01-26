@@ -1,5 +1,4 @@
 var noble = require('noble');
-var querystring = require('querystring');
 var http = require('http');
 
 // var UUIDs = {
@@ -21,7 +20,7 @@ noble.on('scanStop', function(){});
 
 noble.on('discover', function(peripheral){
 	// console.log("Achou o " + peripheral.advertisement.localName + " " + peripheral.uuid + "(RSSI: " + peripheral.rssi + ")");
-	sendBeacon(peripheral);
+	sendBeacon(JSON.stringify(peripheral));
 });
 
 var sendBeacon = function(data){
