@@ -1,3 +1,3 @@
 #!/bin/bash
 
-node server.js > server.log 2>&1 &
+node server.js > log/server.log 2>&1 &
