@@ -1,0 +1,18 @@
+{
+  "name": "ble",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.13.4",
+    "npid": "^0.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js > server.log 2>&1 &"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
