@@ -32,22 +32,10 @@ try {
 
 var express = require('express');
 var app = express();
-var fs = require('fs');
+//var fs = require('fs');
 
 app.get('/ping', function(req, res){
 	res.end("Ping!");
-});
-
-app.get("/access" , function(req, res){
-	fs.readFile("/var/log/nginx/ble.access.log", "utf8", function(err, data){
-		res.end(data);
-	});
-});
-
-app.get("/error" , function(req, res){
-        fs.readFile("/var/log/nginx/ble.error.log", "utf8", function(err, data){
-                res.end(data);
-        });
 });
 
 var server = app.listen(8080, function(){
