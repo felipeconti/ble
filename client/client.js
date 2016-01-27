@@ -20,7 +20,7 @@ noble.on('scanStop', function(){});
 
 noble.on('discover', function(peripheral){
 	// console.log("Achou o " + peripheral.advertisement.localName + " " + peripheral.uuid + "(RSSI: " + peripheral.rssi + ")");
-	sendBeacon(JSON.stringify(peripheral));
+	sendBeacon(JSON.stringify(JSON.parse(peripheral)));
 });
 
 var sendBeacon = function(data){
