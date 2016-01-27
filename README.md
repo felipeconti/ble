@@ -13,7 +13,7 @@ sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo
 
  * Optional: Overclock (push the TURBO button):
 ```sh
- sudo rapi-config
+ sudo raspi-config
 ````
 
 ### install git
