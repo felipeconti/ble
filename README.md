@@ -6,6 +6,16 @@
 ```sh
 sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo apt-get autoremove && sudo apt-get clean
 ```
+### Update and upgrade Linux
+```sh
+sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo apt-get autoremove && sudo apt-get clean
+```
+
+ * Optional: Overclock (push the button TURBO):
+```sh
+ sudo rapi-config
+````
+
 ### install git
 ```sh
 sudo apt-get install git
