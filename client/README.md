@@ -34,5 +34,9 @@ npm install
 ## Usage
 
 ```sh
-npm start or node client.js
+npm start
+
+or
+
+node client.js
 ```
