@@ -11,7 +11,7 @@ sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo
 sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo apt-get autoremove && sudo apt-get clean
 ```
 
- * Optional: Overclock (push the button TURBO):
+ * Optional: Overclock (push the TURBO button):
 ```sh
  sudo rapi-config
 ````
