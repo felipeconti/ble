@@ -29,7 +29,7 @@ sudo apt-get install -y nodejs
 ```sh
 sudo apt-get install bluetooth bluez libbluetooth-dev libudev-dev
 ```
-### Finally get repo of ble
+### Finally clone repo of ble
 ```sh
 cd ~
 git clone https://github.com/felipeconti/ble.git
