@@ -6,10 +6,6 @@
 ```sh
 sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo apt-get autoremove && sudo apt-get clean
 ```
-### Update and upgrade Linux
-```sh
-sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo apt-get autoremove && sudo apt-get clean
-```
 
  * Optional: Overclock (push the TURBO button):
 ```sh
