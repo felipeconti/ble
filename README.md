@@ -12,16 +12,16 @@ sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo
  sudo raspi-config
 ````
 
-### install git
+### Install git
 ```sh
 sudo apt-get install git
 ```
-### install node
+### Install node
 ```sh
 curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
-### install bluetooth libs
+### Install bluetooth libs
 ```sh
 sudo apt-get install bluetooth bluez libbluetooth-dev libudev-dev
 ```
