@@ -2,7 +2,11 @@
 
 ## Prerequisites
 
-### OS X or Linux
+### OS X
+
+ * install [Node](https://nodejs.org)
+
+### Linux
 
 Make sure ```node``` is on your path, if it's not, some options:
  * symlink ```nodejs``` to ```node```: ```sudo ln -s /usr/bin/nodejs /usr/bin/node```
@@ -22,4 +26,7 @@ npm install
 
 ```sh
 npm start
+```
+```sh
+npm stop
 ```
