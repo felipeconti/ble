@@ -24,9 +24,12 @@ npm install
 
 ## Usage
 
+Start server
 ```sh
 npm start
 ```
+
+Stop server
 ```sh
 npm stop
 ```
