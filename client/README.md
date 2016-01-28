@@ -1,5 +1,7 @@
 # BLE Client
 
+Using package [Noble](https://github.com/sandeepmistry/noble).
+
 ## Prerequisites
 
 ### OS X
