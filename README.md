@@ -50,7 +50,7 @@ network={
 ```sh
 sudo iwlist wlan0 scan
 ```
-Now save the file by pressing ctrl+x then y, then finally press enter.
+Now save the file by pressing ***ctrl+x*** then ***y***, then finally press ***enter***.
 ```sh
 sudo reboot
 ```
