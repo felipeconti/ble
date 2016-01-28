@@ -39,12 +39,16 @@ npm start
 ```sh
 sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
 ```
- * Go to the bottom of the file and add the following:
+Go to the bottom of the file and add the following:
 ```sh
 network={
     ssid="Your ESSID"
     psk="Your password"
 }
+```
+* Get ESSID using this comand:
+```sh
+sudo iwlist wlan0 scan
 ```
 Now save the file by pressing ctrl+x then y, then finally press enter.
 ```sh
