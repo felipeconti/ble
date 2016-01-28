@@ -1,5 +1,7 @@
 # BLE
 
+Using package [Noble](https://github.com/sandeepmistry/noble).
+
 ## Initial config for RPi
 
 ### Update and upgrade Linux
