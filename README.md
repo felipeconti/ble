@@ -40,7 +40,7 @@ npm start
 sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 Go to the bottom of the file and add the following:
-```sh
+```js
 network={
     ssid="Your ESSID"
     psk="Your password"
