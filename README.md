@@ -33,3 +33,22 @@ cd ble/client
 npm install
 npm start
 ```
+
+
+# ---
+
+### Wi-Fi
+```sh
+sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+```
+ * Go to the bottom of the file and add the following:
+```sh
+network={
+    ssid="Your ESSID"
+    psk="Your password"
+}
+```
+Now save the file by pressing ctrl+x then y, then finally press enter.
+```sh
+sudo reboot
+```
