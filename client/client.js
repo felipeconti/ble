@@ -61,6 +61,11 @@ var sendBeacon = function(data){
 		});
 	});
 
+	req.on('error', function(err) {
+		console.log('Unable to send data to ' + options.host + ':' + options.port);
+		console.log('Data was lost... ');
+	});
+
 	req.write(data);
 	req.end();
 
