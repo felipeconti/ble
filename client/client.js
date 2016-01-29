@@ -1,6 +1,8 @@
 var noble = require('noble');
 var http = require('http');
 
+var discovereds = [];
+
 // var UUIDs = {
 // 	"80e650e44644": "appleTv",
 // 	"cfb22ab0f82c": "chargerHR",
@@ -19,8 +21,19 @@ noble.on('stateChange', function(state) {
 noble.on('scanStop', function(){});
 
 noble.on('discover', function(peripheral){
+
+	discovereds.push({
+		date: Date.now(),
+		id: peripheral.id,
+		uuid: peripheral.uuid,
+		address: peripheral.address,
+		name: peripheral.advertisement.localName,
+		txPowerLevel: peripheral.advertisement.txPowerLevel,
+		rssi: peripheral.rssi,
+		state: peripheral.state
+	});
+
 	// console.log("Achou o " + peripheral.advertisement.localName + " " + peripheral.uuid + "(RSSI: " + peripheral.rssi + ")");
-	sendBeacon(JSON.stringify(JSON.parse(peripheral)));
 });
 
 var sendBeacon = function(data){
@@ -52,3 +65,18 @@ var sendBeacon = function(data){
 	req.end();
 
 };
+
+setInterval(function() {
+	var data = [];
+	for (var id in discovereds) {
+		data.push(discovereds[id]);
+		delete discovereds[id];
+	};
+
+	if (data.length > 0){
+		discovereds.splice(0, data.length);
+		sendBeacon(JSON.stringify(data));
+	};
+
+	data = null;
+}, 2000);
