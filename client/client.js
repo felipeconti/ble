@@ -1,5 +1,6 @@
 var noble = require('noble');
 var http = require('http');
+var os = require("os");
 
 var discovereds = [];
 
@@ -38,7 +39,7 @@ noble.on('discover', function(peripheral){
 
 var sendBeacon = function(data){
 
-	var user = 'rpi01';
+	var user = os.hostname();
 	var pass = 'rpi';
 
 	var options = {
