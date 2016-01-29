@@ -43,11 +43,17 @@ app.get('/ping', function(req, res){
 });
 
 app.post('/data', function(req, res) {
+	var rpi = 'someone';
+	if (req.headers.authorization){
+		rpi = new Buffer(req.headers.authorization.slice(6), 'base64').toString('ascii');
+		rpi = rpi.split(':')[0];
+	}
+	console.log('\n\n' + rpi + ' posted:\n');
 	console.dir(req.body);
 
-	res.setHeader('Content-Type', 'text/plain')
-	res.write('you posted:\n')
-	res.end(JSON.stringify(req.body, null, 2))
+	// res.setHeader('Content-Type', 'text/plain')
+	res.setHeader('Content-Type', 'application/json');
+	res.end(JSON.stringify(req.body, null, 2));
 });
 
 var server = app.listen(8080, function(){
