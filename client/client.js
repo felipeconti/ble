@@ -38,10 +38,8 @@ noble.on('discover', function(peripheral){
 
 var sendBeacon = function(data){
 
-	// var data = querystring.stringify({
-	// 	username: user,
-	// 	password: pass
-	// });
+	var user = 'rpi01';
+	var pass = 'rpi';
 
 	var options = {
 	    host: 'ble.felipeconti.com.br',
@@ -50,7 +48,8 @@ var sendBeacon = function(data){
 	    method: 'POST',
 	    headers: {
 	        'Content-Type': 'application/json',
-	        'Content-Length': Buffer.byteLength(data)
+	        'Content-Length': Buffer.byteLength(data),
+	        Authorization: 'Basic ' + new Buffer(user+':'+pass).toString('base64')
 	    }
 	};
 
