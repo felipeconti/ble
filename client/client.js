@@ -62,13 +62,16 @@ var sendBeacon = function(data){
 	});
 
 	req.on('error', function(err) {
-		console.log('Unable to send data to ' + options.host + ':' + options.port);
-		console.log('Data was lost... ');
+		console.warn('Unable to send data to ' + options.host + ':' + options.port);
+		console.warn('Data was saved, will send again soon...');
+
+		data = JSON.parse(data);
+		for (var id in data)
+			discovereds.push(data[id]);
 	});
 
 	req.write(data);
 	req.end();
-
 };
 
 setInterval(function() {
