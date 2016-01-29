@@ -33,7 +33,7 @@ Stop server
 ```sh
 npm stop
 ```
-Log
+Log server
 ```sh
 tail -F server.log
 ```
