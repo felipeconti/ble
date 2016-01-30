@@ -31,7 +31,8 @@ noble.on('discover', function(peripheral){
 		name: peripheral.advertisement.localName,
 		txPowerLevel: peripheral.advertisement.txPowerLevel,
 		rssi: peripheral.rssi,
-		state: peripheral.state
+		state: peripheral.state,
+		scanner: os.hostname()
 	});
 
 	// console.log("Achou o " + peripheral.advertisement.localName + " " + peripheral.uuid + "(RSSI: " + peripheral.rssi + ")");
