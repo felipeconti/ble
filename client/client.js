@@ -58,7 +58,7 @@ var sendBeacon = function(data){
 	var req = http.request(options, function(res) {
 		res.setEncoding('utf8');
 		res.on('data', function (chunk) {
-			console.log("body: " + chunk);
+			console.log("Response: " + chunk);
 		});
 	});
 
