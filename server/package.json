@@ -1,5 +1,5 @@
 {
-  "name": "ble",
+  "name": "ble-server",
   "version": "1.0.0",
   "description": "BLE - Server",
   "main": "server.js",
